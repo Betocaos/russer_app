@@ -1,26 +1,26 @@
 '''Yaml
 nome: Build APK
 
-em:
- empurrar:
- Ramos:
- -principal
+on:
+ push:
+ Branches:
+ -main
 
-Empregos:
+Jobs:
  construir:
- Runs-on: ubuntu-22.04.3
+ Runs-on: ubuntu-latest
 
-Passos:
- - nome: Checkout Repository
- Usos: ações/checkout@v2
+Steps:
+ - name: Checkout Repository
+ Uses: actions/checkout@v2
 
-- nome: Configuração Python
- Usos: ações/setup-python@v2
- com:
+- name: Python Configuration
+ Uses: actions/setup-python@v2
+ with:
  python-version: '3.11' # Substitua 'x' pela versão desejada do Python
 
-- nome: Instalar dependências
- correr: |
+- name: Instalar dependências
+ run: |
  pip install kivy # Adicione outras dependências conforme necessário
  pip install kivymd
  pip install sqlite3
@@ -30,7 +30,7 @@ Passos:
  pip install PIL
  pip install io
 
-- nome: Build APK
- correr: |
+- name: Build APK
+ run: |
  python build_script.py # Substitua pelo script que gera o APK
 '''
