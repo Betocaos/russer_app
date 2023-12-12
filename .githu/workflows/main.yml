@@ -1,0 +1,36 @@
+'''Yaml
+nome: Build APK
+
+em:
+ empurrar:
+ Ramos:
+ -principal
+
+Empregos:
+ construir:
+ Runs-on: ubuntu-22.04.3
+
+Passos:
+ - nome: Checkout Repository
+ Usos: ações/checkout@v2
+
+- nome: Configuração Python
+ Usos: ações/setup-python@v2
+ com:
+ python-version: '3.11' # Substitua 'x' pela versão desejada do Python
+
+- nome: Instalar dependências
+ correr: |
+ pip install kivy # Adicione outras dependências conforme necessário
+ pip install kivymd
+ pip install sqlite3
+ pip install pickle
+ pip install datetime
+ pip install json
+ pip install PIL
+ pip install io
+
+- nome: Build APK
+ correr: |
+ python build_script.py # Substitua pelo script que gera o APK
+'''

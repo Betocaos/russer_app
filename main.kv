@@ -1,0 +1,202 @@
+# main.kv
+
+
+
+MDScreenManager:
+    TelaLogin:
+        id: tela_login
+    TelaRegistro:
+        id: tela_registro
+    TelaPrincipal:
+        id: tela_principal
+    TelaCadastroProcedimentos:
+        id: tela_cadastro_procedimentos
+    TelaPesquisa:
+        id: tela_pesquisa
+    TelaProcedimentos:
+        id: tela_procedimentos
+
+<TelaLogin>:
+    name: "tela_login"
+    BoxLayout:
+        orientation: "vertical"
+        spacing: 20
+        TextInput:
+             id: nome_usuario_input
+             hint_text: "Digite seu nome de usuário"
+
+
+
+<TelaRegistro>:
+    name: "tela_registro"
+    BoxLayout:
+        orientation: "vertical"
+        spacing: 20
+
+
+<TelaPrincipal>:
+    name: "tela_principal"
+    BoxLayout:
+        id: layout_principal
+        orientation: "vertical"
+
+#        Image:
+#            source: 'russer_a.png'
+#            size_hint: 1, None
+#            height: dp(100)  # Altura fixa para o logotipo
+#
+#        ScrollView:
+#            MDList:  # Use MDList para criar uma lista rolável
+#                id: procedure_list  # Dê um ID à lista para referenciá-la no código Python
+#
+#        MDRaisedButton:
+#            text: "Cadastrar Procedimento"
+#            on_release: root.change_screen_to_cadastro()
+#
+#        MDRaisedButton:
+#            id: menu_button
+#            background_normal: 'menu_icon.png'  # Substitua 'menu_icon.png' pelo caminho real do seu ícone
+#            size_hint: None, None
+#            size: dp(48), dp(48)
+#            pos_hint: {'center_x': 0.95, 'center_y': 0.95}
+#            on_release: root.open_menu()
+
+<TelaCadastroProcedimentos>:
+    name: "tela_cadastro_procedimentos"
+    BoxLayout:
+        orientation: "vertical"
+        spacing: 20
+#        MDLabel:
+#            text: "tela_cadastro_procedimentos"
+#            halign: "center"
+
+
+
+<TelaPesquisa>:
+    name: "tela_pesquisa"
+    BoxLayout:
+        orientation: "vertical"
+        spacing: 20
+        MDLabel:
+            text: "Tela de Pesquisa"
+            halign: "center"
+
+<TelaProcedimentos>:
+    name: "tela_procedimentos"
+    BoxLayout:
+        orientation: "vertical"
+        spacing: 20
+        MDLabel:
+            text: "Tela de Procedimentos"
+            halign: "center"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+##:kivy 2.0.0
+#
+#ScreenManager:
+#    TelaLogin:
+#    TelaRegistro:
+#    TelaPrincipal:
+#    TelaCadastroProcedimentos:
+#
+#BoxLayout:
+#    orientation: "vertical"
+#
+##    MDTopAppBar:
+##        title: "Russer SAP-URO"
+##        left_action_items: [["menu", lambda x: app.open_menu()]]
+##        right_action_items: [["dots-vertical", lambda x: app.open_submenu()]]
+##        elevation: 5
+##
+##    MDNavigationDrawer:
+##        id: nav_drawer
+##        ContentNavigationDrawer:
+##            screen_manager: screen_manager
+##            nav_drawer: nav_drawer
+##
+##    BoxLayout:
+##        orientation: "vertical"
+##        MDNavigationLayout:
+##            ScreenManager:
+##                id: screen_manager
+##                TelaPrincipal:
+##                    id: tela_principal
+##                    name: "tela_principal"
+##                TelaCadastroProcedimentos:
+##                    id: tela_cadastro_procedimentos
+##                    name: "tela_cadastro_procedimentos"
+#
+#<TelaLogin>:
+#    name: "tela_login"
+#    BoxLayout:
+#        orientation: "vertical"
+#        spacing: 20
+#        MDLabel:
+#            text: '[i][color=808080] Dev Betocaos[/color][/i]'
+#            valign: 'middle'
+#            markup: True
+#            pos_hint: {'left_x': 0.1, 'left_y': 0.1}
+#            size_hint: None, None
+#
+#<TelaRegistro>:
+#    name: "tela_registro"
+#    BoxLayout:
+#        orientation: "vertical"
+#        spacing: 20
+#        MDLabel:
+#            text: " "
+#            halign: "center"
+#
+#<TelaPrincipal>:
+#    BoxLayout:
+#        orientation: "vertical"
+#        spacing: 10
+#        padding: 10
+#        MDLabel:
+#            text: "Tela Principal"
+#            halign: "center"
+#            theme_text_color: "Primary"
+#            font_style: "H4"
+#        MDRaisedButton:
+#            text: "Ir para Tela de Cadastro"
+#            on_release: app.root.switch_screen("tela_cadastro_procedimentos")
+#
+#<TelaCadastroProcedimentos>:
+#    BoxLayout:
+#        orientation: "vertical"
+#        spacing: 10
+#        padding: 10
+#        MDLabel:
+#            text: "Tela de Cadastro de Procedimentos"
+#            halign: "center"
+#            theme_text_color: "Primary"
+#            font_style: "H4"
+#        MDRaisedButton:
+#            text: "Voltar para Tela Principal"
+#            on_release: app.root.switch_screen("tela_principal")
+
+
+
+
